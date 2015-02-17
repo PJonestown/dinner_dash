@@ -52,3 +52,11 @@ group :test do
 	gem 'launchy'
 end
 
+gem 'foundation-rails'
+
+gem 'simple_form'
+
+group :development do
+  gem 'rails_layout'
+end
+
