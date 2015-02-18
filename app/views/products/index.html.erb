@@ -1,10 +1,97 @@
-<h1>Products for sale</h1>
+<%-# TODO-%>
+<%-# Seperate into logical partials and layouts-%>
 
-<ul id = "products"> 
+<div class="row">
+  
+  <div class="large-12 columns">
+		<div class="row">
+     	<div class="large-4 small-12 columns">
+      <img src="http://placehold.it/500x500&text=Logo">
+     
+        <div class="hide-for-small panel">
+         	<h3>Header</h3>
+          <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
+          </h5>
+        </div>
+     
+        <a href="#">
+        	<div class="panel callout radius">
+            <h6>99  items in your cart</h6>
+          </div>
+        </a>
+     
+       </div>
+     
 
-		<%@products.each do |product| %>
-			<li>
-				<%= link_to product.name, product_path(product) %>
-			</li>
-		<% end %>
-</ul>
+            
+        <div class="large-8 columns">
+          <div class="row">
+    
+            <%@products.each do |product| %>
+              <div class="large-4 small-6 columns">
+                <img src="http://placehold.it/500x500&text=Thumbnail">
+								<div class="panel">
+									<%= link_to product.name, product_path(product) %>
+									<h6 class="subheader"> $<%=product.price%></h6> 
+                </div>
+              </div>
+						<% end %>
+     
+                 
+         
+     
+     
+         
+              <div class="row">
+                <div class="large-12 columns">
+                  <div class="panel">
+                    <div class="row">
+     
+                      <div class="large-2 small-6 columns">
+                        <img src="http://placehold.it/300x300&text=Site Owner">
+                      </div>
+     
+                      <div class="large-10 small-6 columns">
+                        <strong>This Site Is Managed By<hr/></strong>
+     
+                        Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis
+                      </div>
+     
+                    </div>
+                  </div>
+                </div>
+     
+         
+     
+              </div>
+            </div>
+          </div>
+     
+     
+         
+     
+          <footer class="row">
+            <div class="large-12 columns"><hr/>
+              <div class="row">
+     
+                <div class="large-6 columns">
+                  <p>© Copyright no one at all. Go to town.</p>
+                </div>
+     
+                <div class="large-6 columns">
+                  <ul class="inline-list right">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                  </ul>
+                </div>
+     
+              </div>
+            </div>
+          </footer>
+     
+         
+     
+        </div>
+      </div>
