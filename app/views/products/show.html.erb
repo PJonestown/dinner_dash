@@ -21,6 +21,12 @@
   <div class="large-5 columns">
     <h2> <%= @product.name %> </h2>
     <p> <%= @product.description %> </p>
+    <p>
+      Categories:
+      <% @product.categories.each do |category| %>
+        <%= link_to category.name, category_path(category) %>
+      <% end %>
+    </p>
 
     <div class="panel">
       <h5>Header</h5>
