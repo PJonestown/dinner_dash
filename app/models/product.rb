@@ -9,6 +9,7 @@ class Product < ActiveRecord::Base
 
 	has_many :categorizes
 	has_many :categories, through: :categorizes
+	has_many :order_items
 
 	def category_list
   	categories.join(", ")
