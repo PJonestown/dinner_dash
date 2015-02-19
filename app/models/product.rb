@@ -7,7 +7,11 @@ class Product < ActiveRecord::Base
 	validates :price, :presence => { :message => " - Price cannot be blank!" },
 						:numericality => { :greater_than_or_equal_to => 0  }
 
-	has_many :categorizations
-	has_many :categories, through: :categorizations
+	has_many :categorizes
+	has_many :categories, through: :categorizes
+
+	def category_list
+  	categories.join(", ")
+	end
 
 end
