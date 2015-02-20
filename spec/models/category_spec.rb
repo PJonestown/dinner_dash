@@ -10,6 +10,7 @@ describe Category do
   end
 
   it "should be invalid if name blank" do 
-  	FactoryGirl.build(:category, name:nil).should_not be_valid
+  	factory = FactoryGirl.build(:category, name:nil)
+  	expect(factory).not_to be_valid
   end
 end
